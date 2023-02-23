@@ -71,6 +71,6 @@ jobs:
       - task: PowerShell@2
         inputs:
           targetType: 'inline'
-          script: 'cd "C:\Users\buildagentvm\Downloads\azcopy_windows_amd64_10.17.0\azcopy_windows_amd64_10.17.0"; .\azcopy copy "$(Build.ArtifactStagingDirectory)\demobuild.zip" "https://storeaccvm.blob.core.windows.net/buildartifact?sp=racwl&st=2023-02-23T07:50:36Z&se=2023-03-23T15:50:36Z&spr=https&sv=2021-06-08&sr=c&sig=5X37kIEuSHGSIcz5nu9sPHEhmPwozGwRQLSnFW5LjpM%3D"  --log-level=INFO --recursive'
+          script: 'cd "C:\Users\buildagentvm\Downloads\azcopy_windows_amd64_10.17.0\azcopy_windows_amd64_10.17.0"; .\azcopy copy "$(Build.ArtifactStagingDirectory)\build.zip" "https://storeaccvm.blob.core.windows.net/buildartifact?sp=racwl&st=2023-02-23T07:50:36Z&se=2023-03-23T15:50:36Z&spr=https&sv=2021-06-08&sr=c&sig=5X37kIEuSHGSIcz5nu9sPHEhmPwozGwRQLSnFW5LjpM%3D"  --log-level=INFO --recursive'
 
 
