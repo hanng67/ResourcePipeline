@@ -59,7 +59,7 @@ jobs:
           rootFolderOrFile: '$(Build.BinariesDirectory)\Build'
           includeRootFolder: true
           archiveType: 'zip'
-          archiveFile: '$(Build.ArtifactStagingDirectory)\demobuild.zip'
+          archiveFile: '$(Build.ArtifactStagingDirectory)\build.zip'
           replaceExistingArchive: true
       - task: PowerShell@2
         env:
