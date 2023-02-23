@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: Default
+  demands: UnityBuildServer
+
+jobs:
+  - job: BuildGameWindows
+    steps:
+    - task: UnityBuildTask@3
+      inputs:
+        buildTarget: 'standalone'
+        unityEditorsPathMode: 'unityHub'
+        outputPath: '$(Build.BinariesDirectory)\Build'
+        outputFileName: 'demoBuild'
+
